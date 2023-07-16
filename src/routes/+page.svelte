@@ -1,6 +1,6 @@
 <script>
-	import ProjectPreview from "../components/project_preview.svelte";
-    import Image from "../components/Image.svelte";
+	import ProjectPreview from "$lib/project_preview.svelte";
+    import Image from "$lib/Image.svelte";
 </script>
 
 <div class="flex flex-col justify-between text-center">
