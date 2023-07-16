@@ -1,5 +1,5 @@
 <script>
-	import ProjectPreview from "$lib/project_preview.svelte";
+	import ProjectPreview from "$lib/ProjectPreview.svelte";
     import Image from "$lib/Image.svelte";
 </script>
 
