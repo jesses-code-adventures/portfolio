@@ -12,4 +12,4 @@
     <meta name="description" content="A management console made by Jesse Williams.">
 </svelte:head>
 
-<ProjectView name={name} content={content}  github_url={github_url} images={images} />
+<ProjectView name={name} content={content} web_url={null} github_url={github_url} images={images} />
