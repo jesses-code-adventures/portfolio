@@ -23,6 +23,7 @@
 	function setMessage(event) {
 		message = event.currentTarget.value;
 	}
+    document.title = "Contact - Jesse Williams";
 </script>
 
 <div class="flex justify-evenly pt-32 h-screen">
