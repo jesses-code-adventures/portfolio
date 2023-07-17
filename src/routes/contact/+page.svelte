@@ -27,13 +27,13 @@
 </script>
 
 <div class="flex justify-evenly pt-32 h-screen">
-	<form class="flex flex-col w-72 dark:border-stone-200 h-96 justify-evenly">
+	<form class="flex flex-col w-72 dark:border-stone-200 h-96 justify-evenly" name="contact" method="POST" data-netlify="true">
         <label for="name">Name</label>
 		<input id="name" class="dark:bg-stone-950 dark:border-stone-200 border-2 focus:shadow-glow" type="text" on:change={setName} />
         <label for="email">Email</label>
-		<input id="email" class="dark:bg-stone-950 dark:border-stone-200 border-2 focus:shadow-glow" type="text" on:change={setEmail} />
+		<input id="email" type="email" class="dark:bg-stone-950 dark:border-stone-200 border-2 focus:shadow-glow" on:change={setEmail} />
         <label for="message">Message</label>
         <textarea id="message" class="dark:bg-stone-950 dark:border-stone-200 border-2 focus:shadow-glow" on:change={setMessage} />
-		<button class="hover:dark:bg-stone-600 p-4" on:click={() => console.log(name, email, message)}>Submit</button>
+		<button type="submit" class="hover:dark:bg-stone-600 p-4">Submit</button>
 	</form>
 </div>
