@@ -7,4 +7,9 @@
     const images = [];
 </script>
 
+<svelte:head>
+    <title>MySQL Translate - Jesse Williams</title>
+    <meta name="description" content="An artist marketing website by Jesse Williams.">
+</svelte:head>
+
 <ProjectView name={name} content={content}  github_url={github_url} images={images} />

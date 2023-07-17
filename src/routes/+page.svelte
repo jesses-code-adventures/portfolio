@@ -3,6 +3,11 @@
 	import Image from '$lib/Image.svelte';
 </script>
 
+<svelte:head>
+    <title>Home - Jesse Williams</title>
+    <meta name="description" content="Portfolio for Sydney-based software developer Jesse Williams.">
+</svelte:head>
+
 <div class="flex flex-col justify-between text-center">
 	<div class="h-96 flex justify-between">
 		<div class="flex flex-col justify-end md:h-2/5 md:border-b-4 border-stone-600 w-full">

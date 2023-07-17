@@ -7,4 +7,9 @@
     const images = [];
 </script>
 
+<svelte:head>
+    <title>Ableton-V - Jesse Williams</title>
+    <meta name="description" content="An ableton version control system by Jesse Williams.">
+</svelte:head>
+
 <ProjectView name={name} content={content}  github_url={github_url} images={images} />

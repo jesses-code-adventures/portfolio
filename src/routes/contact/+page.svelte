@@ -25,6 +25,11 @@
 	}
 </script>
 
+<svelte:head>
+    <title>Contact - Jesse Williams</title>
+    <meta name="description" content="Contact Sydney-based software developer Jesse Williams.">
+</svelte:head>
+
 <div class="flex justify-evenly pt-32 h-screen">
 	<form class="flex flex-col w-72 dark:border-stone-200 h-96 justify-evenly" name="contact" method="POST" data-netlify="true">
         <label for="name">Name</label>
