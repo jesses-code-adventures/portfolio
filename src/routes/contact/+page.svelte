@@ -42,6 +42,7 @@
 		<label for="name">Name</label>
 		<input
 			id="name"
+            name="name"
 			required
 			placeholder="Name"
 			class="dark:bg-stone-950 dark:border-stone-200 border-2 focus:shadow-glow"
@@ -51,6 +52,7 @@
 		<label for="email">Email</label>
 		<input
 			id="email"
+            name="email"
 			required
 			placeholder="Email"
 			type="email"
@@ -60,6 +62,7 @@
 		<label for="message">Message</label>
 		<textarea
 			id="message"
+            name="message"
 			required
 			placeholder="Type here..."
 			class="dark:bg-stone-950 dark:border-stone-200 border-2 focus:shadow-glow"
