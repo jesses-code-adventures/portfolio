@@ -13,7 +13,7 @@
 		<div class="flex flex-col justify-end md:h-2/5 md:border-b-4 border-stone-600 w-full">
 			<h1 class="text-3xl md:text-left sm:pl-12 lg:pl-36">Jesse Williams - Software Developer</h1>
 			<Image
-				src="GIVTEL HEADSHOTS-10_websize.jpg"
+				src="headshot.webp"
 				tailwindClass="absolute right-20 sm:right-64 md:right-20 lg:right-72 top-20 object-scale-down rounded-full h-72 border-4 border-stone-600"
 				alt="Photo of jesse"
 			/>
