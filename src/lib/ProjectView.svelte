@@ -10,15 +10,15 @@
     document.title = name;
 </script>
 
-<div>
-    <h1 class="text-3xl text-left pl-36">{name}</h1>
+<div class="pt-24 h-screen">
+    <h1 class="text-3xl text-left lg:pl-24">{name}</h1>
     {#if github_url}
-        <a href={github_url} class="text-3xl text-left pl-36 italic">View the code on github</a>
+        <a href={github_url} target="_blank" class="text-xl text-left lg:pl-24 italic">Github</a>
     {/if}
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 w-full justify-items-center items-center mx-auto gap-y-8">
         {#each images as image}
             {image}
         {/each}
     </div>
-    <div class="p-4 text-xl">{content}</div>
+    <div class="whitespace-pre-line p-4 text-xl">{content}</div>
 </div>

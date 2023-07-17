@@ -25,7 +25,7 @@
 	}
 </script>
 
-<div class="flex justify-evenly pt-32">
+<div class="flex justify-evenly pt-32 h-screen">
 	<form class="flex flex-col w-72 dark:border-stone-200 h-96 justify-evenly">
         <label for="name">Name</label>
 		<input id="name" class="dark:bg-stone-950 dark:border-stone-200 border-2 focus:shadow-glow" type="text" on:change={setName} />
