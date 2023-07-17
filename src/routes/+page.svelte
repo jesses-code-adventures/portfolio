@@ -1,7 +1,6 @@
 <script>
 	import ProjectPreview from '$lib/ProjectPreview.svelte';
 	import Image from '$lib/Image.svelte';
-	document.title = 'Jesse Williams - Software Developer';
 </script>
 
 <div class="flex flex-col justify-between text-center">

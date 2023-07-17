@@ -7,7 +7,6 @@
     export let github_url;
     /** @type {Array<import('$lib/Image.svelte')>} */
     export let images;
-    document.title = name;
 </script>
 
 <div class="pt-24 h-screen">
