@@ -8,7 +8,7 @@
 </script>
 
 <svelte:head>
-    <title>MySQL Translate - Jesse Williams</title>
+    <title>Kid Soma Website - Jesse Williams</title>
     <meta name="description" content="An artist marketing website by Jesse Williams.">
 </svelte:head>
 
