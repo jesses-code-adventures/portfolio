@@ -45,7 +45,7 @@
             name="name"
 			required
 			placeholder="Name"
-			class="dark:bg-stone-950 dark:border-stone-200 border-2 focus:shadow-glow"
+			class="dark:bg-stone-950 dark:border-stone-200 border-2 focus:shadow-glow p-2"
 			type="text"
 			on:change={setName}
 		/>
@@ -56,7 +56,7 @@
 			required
 			placeholder="Email"
 			type="email"
-			class="dark:bg-stone-950 dark:border-stone-200 border-2 focus:shadow-glow"
+			class="dark:bg-stone-950 dark:border-stone-200 border-2 focus:shadow-glow p-2"
 			on:change={setEmail}
 		/>
 		<label for="message">Message</label>
@@ -65,7 +65,7 @@
             name="message"
 			required
 			placeholder="Type here..."
-			class="dark:bg-stone-950 dark:border-stone-200 border-2 focus:shadow-glow"
+			class="dark:bg-stone-950 dark:border-stone-200 border-2 focus:shadow-glow p-2"
 			on:change={setMessage}
 		/>
 		<button type="submit" class="hover:dark:bg-stone-600 p-4">Submit</button>

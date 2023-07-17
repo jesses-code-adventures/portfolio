@@ -2,7 +2,7 @@
 	import Image from './Image.svelte';
 </script>
 
-<div class="w-full dark:bg-stone-950 bg-white dark:text-white text-black flex justify-evenly py-8">
+<div class="w-full dark:bg-stone-950 bg-white dark:text-white text-black flex justify-evenly py-2 absolute bottom-0">
 	<a
 		target="_blank"
 		href="https://soundcloud.com/jessesbeetshoppe/"
