@@ -40,7 +40,6 @@ FROM base
 # Copy built application
 COPY --from=build /app/build /app/build
 COPY --from=build /app/package.json /app/package.json
-COPY --from=build /app/google2820014ca3243300.html /app/google2820014ca3243300.html
 
 # Start the server by default, this can be overwritten at runtime
 EXPOSE 3000
