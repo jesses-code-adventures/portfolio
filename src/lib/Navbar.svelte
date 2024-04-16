@@ -1,6 +1,6 @@
-<div class="w-full dark:bg-stone-900 flex justify-evenly px-16 md:px-0">
-    <a class="text-white sm:text-xl p-4 dark:hover:bg-stone-700" href="/">Home</a>
-    <a class="text-white sm:text-xl p-4 dark:hover:bg-stone-700" href="/background">Background</a>
-    <a class="text-white sm:text-xl p-4 dark:hover:bg-stone-700" href="/projects">Projects</a>
-    <a class="text-white sm:text-xl p-4 dark:hover:bg-stone-700" href="/contact">Contact</a>
+<div class="flex w-full justify-evenly sm:px-16 dark:bg-stone-900">
+    <a class="p-4 text-white dark:hover:bg-stone-700 sm:text-xl" href="/">Home</a>
+    <a class="p-4 text-white dark:hover:bg-stone-700 sm:text-xl" href="/background">Background</a>
+    <a class="p-4 text-white dark:hover:bg-stone-700 sm:text-xl" href="/projects">Projects</a>
+    <a class="p-4 text-white dark:hover:bg-stone-700 sm:text-xl" href="/contact">Contact</a>
 </div>

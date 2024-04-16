@@ -1,12 +1,15 @@
 <script>
 	import '../app.css';
-    import Navbar from "$lib/Navbar.svelte";
-    import Footer from "$lib/Footer.svelte";
+	import Navbar from '$lib/Navbar.svelte';
+	import Footer from '$lib/Footer.svelte';
 </script>
 
-<div class="h-screen overflow-y-scroll lg:h-screen dark:bg-stone-950 bg-white dark:text-white text-black">
-    <Navbar />
-    <slot />
-    <div class="h-16" />
-    <Footer />
+<div
+	class="overflow-x-hidden bg-white text-black dark:bg-stone-950 dark:text-white"
+>
+	<Navbar />
+	<div id="content" class="flex h-screen flex-col justify-between overflow-y-scroll pb-12 text-center">
+		<slot />
+	</div>
+	<Footer />
 </div>

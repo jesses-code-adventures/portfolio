@@ -1,10 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-	content: [
-		'./src/**/*.svelte',
-		// may also want to include HTML files
-		'./src/**/*.html'
-	],
+	content: ['./src/**/*.svelte', './src/**/*.html'],
 	theme: {
 		extend: {
 			boxShadow: {
