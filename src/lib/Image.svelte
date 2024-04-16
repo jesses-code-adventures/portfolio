@@ -6,6 +6,8 @@
 	export let tailwindClass;
 	/** @type {string} */
 	export let alt;
+	/** @type {boolean} */
+	export let description = false;
 
 	let loaded = false;
 	let failed = false;
@@ -29,7 +31,12 @@
 	});
 </script>
 
-{#if loaded}
+{#if loaded && description}
+	<div class="flex flex-col text-center">
+		<img {src} class={tailwindClass} {alt} />
+		<p class="italic text-zinc-900 dark:text-zinc-100">{alt}</p>
+	</div>
+{:else if loaded}
 	<img {src} class={tailwindClass} {alt} />
 {:else if failed}
 	<img

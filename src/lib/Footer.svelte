@@ -3,7 +3,7 @@
 </script>
 
 <div
-	class="absolute bottom-0 mt-20 flex w-full justify-evenly border-t-2 border-t-black bg-white py-2 text-black dark:border-t-white dark:bg-stone-950 dark:text-white"
+	class="fixed bottom-0 w-full flex justify-evenly border-t-2 border-t-black bg-white py-2 text-black dark:border-t-white dark:bg-stone-950 dark:text-white"
 >
 	<a
 		target="_blank"

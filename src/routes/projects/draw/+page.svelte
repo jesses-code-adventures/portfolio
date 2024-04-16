@@ -13,8 +13,8 @@ This desire was borne out of witnessing many online debates between other nerds 
 </script>
 
 <svelte:head>
-    <title>Gecco - Jesse Williams</title>
-    <meta name="description" content="A management console made by Jesse Williams.">
+    <title>draw - Jesse Williams</title>
+    <meta name="description" content="A simple drawing app.">
 </svelte:head>
 
 <ProjectView name={name} content={content} web_url={"https://draw.fly.dev/"} github_url={github_url} images={images} />

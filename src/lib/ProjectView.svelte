@@ -13,12 +13,12 @@
 
 <div class="h-screen pt-24">
 	<h1 class="text-left text-3xl lg:pl-24">{name}</h1>
-	<div class="text-left">
+	<div class="text-left lg:pl-24">
 		{#if web_url}
 			<a
 				href={web_url}
 				target="_blank"
-				class="text-left text-xl italic text-stone-800 dark:text-stone-200 lg:pl-24">Website</a
+				class="text-left text-xl italic text-stone-800 dark:text-stone-200">Website</a
 			>
 		{/if}
 		{#if web_url && github_url}
@@ -41,7 +41,7 @@
 	</div>
 	<div class="flex justify-evenly">
 		<!-- eslint-disable-next-line -->
-		<div class="w-4/5 whitespace-pre-line p-4 text-xl">{@html content}</div>
+		<div class="w-4/5 whitespace-pre-line p-4 text-left text-xl">{@html content}</div>
 		<!--(eslint warns of xss attacks using @html, but I don't really care for a static site) -->
 	</div>
 </div>
