@@ -4,14 +4,11 @@
 	import Footer from '$lib/Footer.svelte';
 </script>
 
-<svelte:head>
-</svelte:head>
-
 <div
-	class="overflow-x-hidden bg-white text-black dark:bg-stone-950 dark:text-white"
+	class=""
 >
 	<Navbar />
-	<div id="content" class="flex h-screen flex-col justify-between pb-12 text-center">
+	<div id="content" class="flex flex-col justify-between text-center pt-20">
 		<slot />
 	</div>
 	<Footer />

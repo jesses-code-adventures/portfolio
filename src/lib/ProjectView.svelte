@@ -11,7 +11,7 @@
 	export let images;
 </script>
 
-<div class="h-screen pt-24">
+<div id="projectView" class="pb-16">
 	<h1 class="text-left text-3xl lg:pl-24">{name}</h1>
 	<div class="text-left lg:pl-24">
 		{#if web_url}
@@ -32,6 +32,7 @@
 			>
 		{/if}
 	</div>
+	{#if images.length > 0}
 	<div
 		class="mx-auto grid w-full grid-cols-1 items-center justify-items-center gap-y-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
 	>
@@ -39,6 +40,7 @@
 			{image}
 		{/each}
 	</div>
+	{/if}
 	<div class="flex justify-evenly">
 		<!-- eslint-disable-next-line -->
 		<div class="w-4/5 whitespace-pre-line p-4 text-left text-xl">{@html content}</div>

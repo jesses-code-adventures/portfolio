@@ -8,7 +8,9 @@ Using Excavator, it's possible to create libraries out of your samples by taggin
 
 This was the first CLI application I'd made in Go, but I was familiar with making CLI applications in Rust, so the learning curve was not too steep. I was able to get the application to a usable state in a few days, and I've been using it to manage my own samples since then. It was my first experience deploying an application to Homebrew, a process which has caused me considerable emotional turmoil, but this was also a great exercise in building a deployment pipeline and testing it.
 
-I'd also like to mention how great the Charm CLI tools are, including bubbletea, lipgloss and various others. These tools allowed me to establish the render loop and the styling of the application extremely quickly, they were really a pleasure to get set up with.
+I was able to implement audio playback using the Beep library, allowing samples to be auditioned. Randomized auditioning is also a feature and this combined with the ability to fuzzy find through the sample library creates a much quicker sample browsing flow than most DAW experiences I've tried.
+
+I'd also like to mention how great the Charm CLI tools are, including Bubbletea, Lipgloss and various others. These tools allowed me to establish the render loop and the styling of the application extremely quickly, they were really a pleasure to get set up with.
 
 I'm not sure how useful this application is to anyone else, but it's very satisfying to me personally.
 `
