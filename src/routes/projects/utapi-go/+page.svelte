@@ -1,14 +1,24 @@
+<svelte:head>
+	<title>utapi-go - Jesse Williams</title>
+	<meta
+		name="description"
+		content="A golang api wrapper for interacting with the uploadthing API."
+	/>
+	<link href="/prism.css" rel="stylesheet" />
+	<script src="/prism.js" defer></script>
+</svelte:head>
+
 <script>
 	import ProjectView from '$lib/ProjectView.svelte';
 	const name = 'utapi-go';
 	const content = `
-A simple golang library built to interact with the API of a file upload service called <a href="https://uploadthing.com/ target="_blank">Uploadthing</a>.
+A simple golang library built to interact with the API of a file upload service called <a class="hyperlink" href="https://uploadthing.com/" target="_blank">Uploadthing</a>.
 
 I built this to mirror the functionality provided by <a href="https://uploadthing-1m3c.vercel.app/api-reference/ut-api" target="_blank">Uploadthing's typescript SDK</a> for users that ran golang servers.
 
 The reason for building the library and making it public was that Uploadthing don't provide documentation for traditional API endpoints, instead encouraging users to use the SDK. I wanted Go users to be able to reference that documentation with access to similar tools.
 
-You can use utapi-go by running <span class="italic">go get github.com/jesses-code-adventures/utapi-go</span> and then importing it into your project. Documentation is in the github repository and in the docstrings of the code.
+You can use utapi-go by running <span class="italic">go get github.com/jesses-code-adventures/utapi-go</span> and then importing it into your project. <a href="https://pkg.go.dev/github.com/jesses-code-adventures/utapi-go#section-documentation" class="hyperlink" target="_blank">Documentation is here</a> and in the docstrings of the code.
 
 Example usage:
 <pre class="z-0">
@@ -49,13 +59,5 @@ func main() {
 	/** @type {Array<import('$lib/Image.svelte')>} */
 	const images = [];
 </script>
-
-<svelte:head>
-	<title>utapi-go - Jesse Williams</title>
-	<meta
-		name="description"
-		content="A golang api wrapper for interacting with the uploadthing API."
-	/>
-</svelte:head>
 
 <ProjectView {name} {content} web_url={null} {github_url} {images} />
