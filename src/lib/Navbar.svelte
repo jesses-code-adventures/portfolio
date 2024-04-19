@@ -57,8 +57,8 @@
 			<a class="p-4 dark:text-white dark:hover:bg-stone-700 sm:text-xl" href="/background"
 				>Background</a
 			>
-			<a class="p-4 dark:text-white dark:hover:bg-stone-700 sm:text-xl" href="/projects">Projects</a
-			>
+			<!-- <a class="p-4 dark:text-white dark:hover:bg-stone-700 sm:text-xl" href="/projects">Projects</a -->
+			<!-- > -->
 			<a class="p-4 dark:text-white dark:hover:bg-stone-700 sm:text-xl" href="/contact">Contact</a>
 		</div>
 	</div>
@@ -70,7 +70,7 @@
 		<a class="p-4 dark:text-white dark:hover:bg-stone-700 sm:text-xl" href="/background"
 			>Background</a
 		>
-		<a class="p-4 dark:text-white dark:hover:bg-stone-700 sm:text-xl" href="/projects">Projects</a>
+		<!-- <a class="p-4 dark:text-white dark:hover:bg-stone-700 sm:text-xl" href="/projects">Projects</a> -->
 		<a class="p-4 dark:text-white dark:hover:bg-stone-700 sm:text-xl" href="/contact">Contact</a>
 	</div>
 {/if}
