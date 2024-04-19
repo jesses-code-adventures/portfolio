@@ -36,7 +36,7 @@
 		class="fixed left-0 top-0 z-50 w-full bg-stone-100 text-black dark:bg-stone-900 dark:text-white"
 	>
 		<div class="flex items-center justify-end p-4">
-			<button class="hamburger" on:click={toggleMenu}>
+			<button id="hamburger" class="hamburger" on:click={toggleMenu}>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					width="30"
