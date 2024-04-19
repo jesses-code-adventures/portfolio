@@ -11,7 +11,7 @@
 	/>
 </svelte:head>
 
-<div class="flex flex-col justify-evenly text-center pt-16">
+<div class="flex flex-col justify-evenly text-center pt-16 gap-12">
 	<ProjectsList title={false} />
 	<FunProjectsView title={false} />
 </div>
