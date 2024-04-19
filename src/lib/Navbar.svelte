@@ -1,27 +1,37 @@
 <script>
 	import { onMount } from 'svelte';
 	let isOpen = false;
+	const tinyDeviceWidth = 380;
 
 	function toggleMenu() {
 		isOpen = !isOpen;
 	}
 
 	let smallDevice = false;
+	let tinyDevice = false;
 	// Optional: Close menu on window resize
 	onMount(() => {
 		smallDevice = window.innerWidth <= 640;
+		tinyDevice = window.innerWidth <= tinyDeviceWidth;
 		window.addEventListener('resize', () => {
 			isOpen = false;
-			if (window.innerWidth <= 640) {
+			if (window.innerWidth <= 640 && window.innerWidth > tinyDeviceWidth) {
 				smallDevice = true;
+				tinyDevice = false;
+			} else if (window.innerWidth <= tinyDeviceWidth) {
+				tinyDevice = true;
+				smallDevice = false;
 			} else {
 				smallDevice = false;
+				tinyDevice = false;
 			}
 		});
 	});
 </script>
 
-{#if smallDevice}
+{#if tinyDevice}
+	<div hidden>navbar</div>
+{:else if smallDevice}
 	<div
 		class="fixed left-0 top-0 z-50 w-full bg-stone-100 text-black dark:bg-stone-900 dark:text-white"
 	>
