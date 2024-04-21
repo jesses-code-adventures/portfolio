@@ -161,7 +161,7 @@ impl Log {
 	<pre class="prosepre">
 This was a central concept in Rust, but it was more obscured in languages I was used to (especially before Python introduced match statements in 3.10). However, it's an invaluable pattern for solving many programming problems and using Rust gave me a new appreciation for languages with good enum support.
 
-To go back to our example of transferring records in Python, I'll be upfront - there's a bit more code (perhaps a byproduct of using Rust at all). It's worth it though. Rust's powerful iterators gave me the desire to make better use of my Python iterations, so I googled my way to generators. We weren't able to use multithreaded requests with the rate limits applied by our service providers, but creating a generator of parsed Record responses allowed data to flow much more effectively than when we were waiting for the records, then putting them all in the database. It also naturally handled large batches of records better, only dealing with one record at a time regardless of the size of the job.
+To go back to our example of transferring records in Python, I'll be upfront - there's a bit more code (perhaps a byproduct of using Rust at all). It's worth it though. Rust's powerful iterators gave me the desire to make better use of my Python iterations, so I googled my way to generators. We weren't able to use multithreaded requests without hitting rate limits, but creating a generator of parsed Record responses allowed data to flow much more effectively than when we were waiting for the records, then putting them all in the database. It also naturally handled large batches of records better, only dealing with one record at a time regardless of the size of the job.
 </pre>
 
 	<pre class="prosepre">
@@ -265,6 +265,9 @@ if __name__ == "__main__":
 
 `}
 </code>
+</pre>
+<pre class="prosepre">
+Although this is a bit of a contrived example, the reality of this exploration is that it had influence on many more parts of my practice. I see there being a point of diminishing returns to constantly exploring new languages, but having an expanded toolkit doesn't hurt. I plan to explore some embedded development using Rust or C in the future, but otherwise using Go, Typescript and Python whenever any are appropriate/available is likely where I'll be focused when doing web work for now.
 </pre>
 </div>
 
