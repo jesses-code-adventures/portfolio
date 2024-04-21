@@ -10,6 +10,7 @@
 		name="description"
 		content="Portfolio for Sydney-based software developer Jesse Williams."
 	/>
+	<link rel="canonical" />
 </svelte:head>
 
 <div class="flex flex-col text-center">
