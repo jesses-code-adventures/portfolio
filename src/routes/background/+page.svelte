@@ -13,7 +13,7 @@ Now that we had a new API, we needed a way to monitor its activity and export da
 			target="_blank"
 			class="hyperlink">Theo's</a
 		> <a href="https://create.t3.gg/" target="_blank" class="hyperlink">T3 Stack</a
-		> the concepts were straightforward enough for me to tie the concepts together and build what we needed quite quickly. The density of the Typescript/React ecosystem allowed me to access a thorough set of features for next to no cost, as most of the services have extremely generous free tiers. With the platform in production for over a year, costs have not increased despite having detailed logs (Vercel & Axiom), easy authentication management with hotswappable oauth providers (Next Auth) and email services provided by React Email.
+		> the concepts were straightforward enough for me to tie things together and build what we needed quite quickly. The density of the Typescript/React ecosystem allowed me to access a thorough set of features for next to no cost, as most of the services have extremely generous free tiers. With the platform in production for over a year, costs have not increased despite having detailed logs (Vercel & Axiom), easy authentication management with hotswappable oauth providers (Next Auth) and email services provided by React Email.
 
 If you're a bit more technical, you might enjoy <a
 			class="internalHyperlink"
