@@ -43,7 +43,7 @@
 	{/if}
 	<div class="flex justify-evenly">
 		<!-- eslint-disable-next-line -->
-		<div class="w-4/5 whitespace-pre-line p-4 text-left text-xl">{@html content}</div>
+		<div class="w-4/5 prosepre p-4 text-xl z-10">{@html content}</div>
 		<!--(eslint warns of xss attacks using @html, but I don't really care for a static site) -->
 	</div>
 </div>

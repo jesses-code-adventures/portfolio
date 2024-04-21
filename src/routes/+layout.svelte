@@ -4,12 +4,8 @@
 	import Footer from '$lib/Footer.svelte';
 </script>
 
-<div
-	class=""
->
-	<Navbar />
-	<div id="content" class="flex flex-col justify-between text-center pt-20">
-		<slot />
-	</div>
-	<Footer />
+<Navbar />
+<div id="content" class="flex flex-col justify-between text-center pt-20 px-4 sm:px-0">
+	<slot />
 </div>
+<Footer />

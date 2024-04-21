@@ -6,7 +6,7 @@
 
 <div id="funSideProjectsContainer">
 	{#if title}
-		<h2 class="py-12 text-2xl">More Fun Side Projects</h2>
+		<h2 class="py-12 text-2xl">Side Projects/Developers Might Like</h2>
 	{/if}
 	<div
 		class="mx-auto flex w-full flex-col items-center justify-evenly justify-items-center gap-y-8 sm:flex-row"
@@ -20,6 +20,12 @@
 			name="draw"
 			description="A simple browser-based drawing app written in Javascript and served using a golang web server."
 			url="/projects/draw/"
+		/>
+		<ProjectPreview
+			name="nvim-config"
+			description="My Neovim config."
+			url="https://github.com/jesses-code-adventures/nvim-config"
+			external={true}
 		/>
 	</div>
 </div>

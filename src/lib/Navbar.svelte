@@ -1,16 +1,35 @@
 <script>
 	import { onMount } from 'svelte';
 	let isOpen = false;
-	const tinyDeviceWidth = 380;
+	const tinyDeviceWidth = 340;
 
 	function toggleMenu() {
 		isOpen = !isOpen;
 	}
 
+	function closeMenu() {
+		isOpen = false;
+	}
+
+	function changeWindow() {
+		closeMenu();
+	}
+
+	//Reset scroll top
+
+
+	// window.on('beforeunload', function(){
+	// 	  $(window).scrollTop(0);
+	// });
+
 	let smallDevice = false;
 	let tinyDevice = false;
-	// Optional: Close menu on window resize
 	onMount(() => {
+		history.scrollRestoration = "manual";
+        window.scrollTo(0, 0);
+        window.onpopstate = () => {
+            window.scrollTo(0, 0);
+        };
 		smallDevice = window.innerWidth <= 640;
 		tinyDevice = window.innerWidth <= tinyDeviceWidth;
 		window.addEventListener('resize', () => {
@@ -33,9 +52,10 @@
 	<div hidden>navbar</div>
 {:else if smallDevice}
 	<div
-		class="fixed left-0 top-0 z-50 w-full bg-stone-100 text-black dark:bg-stone-900 dark:text-white"
+		id="smallDevceMenuAndButton"
+		class="fixed left-0 top-0 z-50 w-full bg-stone-100 text-black dark:bg-black dark:text-white"
 	>
-		<div class="flex items-center justify-end p-4">
+		<div id="smallDeviceButtonContainer" class="flex items-center justify-end p-4">
 			<button id="hamburger" aria-label="hamburger" class="hamburger" on:click={toggleMenu}>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
@@ -52,26 +72,67 @@
 				</svg>
 			</button>
 		</div>
-		<div class:menu-enter={!isOpen} class:menu-enter-active={isOpen}>
-			<a class="p-4 dark:text-white dark:hover:bg-stone-700 sm:text-xl" href="/">Home</a>
-			<a class="p-4 dark:text-white dark:hover:bg-stone-700 sm:text-xl" href="/background"
-				>Background</a
+		<div
+			id="smallDeviceOptions"
+			class:menu-enter={!isOpen}
+			class:menu-enter-active={isOpen}
+			class="h-screen flex flex-col text-center"
+		>
+			<a
+				id="smallHomeOption"
+				class="p-4 hover:cursor-default hover:bg-stone-300 dark:text-white dark:hover:bg-stone-700 sm:text-xl"
+				on:click={changeWindow}
+				href="/">Home</a
 			>
-			<!-- <a class="p-4 dark:text-white dark:hover:bg-stone-700 sm:text-xl" href="/projects">Projects</a -->
-			<!-- > -->
-			<a class="p-4 dark:text-white dark:hover:bg-stone-700 sm:text-xl" href="/contact">Contact</a>
+			<a
+				id="smallBackgroundOption"
+				class="p-4 hover:cursor-default hover:bg-stone-300 dark:text-white dark:hover:bg-stone-700 sm:text-xl"
+				on:click={changeWindow}
+				href="/background">Background</a
+			>
+			<a
+				id="smallThoughtsOption"
+				class="p-4 hover:cursor-default hover:bg-stone-300 dark:text-white dark:hover:bg-stone-700 sm:text-xl"
+				href="/thoughts"
+				on:click={changeWindow}>Thoughts</a
+			>
+			<a
+				id="smallContactOption"
+				class="p-4 hover:cursor-default hover:bg-stone-300 dark:text-white dark:hover:bg-stone-700 sm:text-xl"
+				href="/contact"
+				on:click={changeWindow}>Contact</a
+			>
 		</div>
 	</div>
 {:else}
 	<div
-		class="fixed top-0 z-50 flex w-full justify-evenly bg-stone-100 text-black dark:bg-stone-900 dark:text-white sm:px-16"
+		id="largeDeviceOptions"
+		class="fixed top-0 z-50 flex w-full justify-evenly bg-stone-100 text-black dark:bg-black dark:text-white sm:px-16"
 	>
-		<a class="p-4 dark:text-white dark:hover:bg-stone-700 sm:text-xl" href="/">Home</a>
-		<a class="p-4 dark:text-white dark:hover:bg-stone-700 sm:text-xl" href="/background"
-			>Background</a
+		<a
+			id="largeHomeOption"
+			class="p-4 hover:cursor-default dark:text-white hover:bg-stone-300 dark:hover:bg-stone-700 sm:text-xl"
+			href="/"
+			on:click={changeWindow}>Home</a
 		>
-		<!-- <a class="p-4 dark:text-white dark:hover:bg-stone-700 sm:text-xl" href="/projects">Projects</a> -->
-		<a class="p-4 dark:text-white dark:hover:bg-stone-700 sm:text-xl" href="/contact">Contact</a>
+		<a
+			id="largeBackgroundOption"
+			class="p-4 hover:cursor-default hover:bg-stone-300 dark:text-white dark:hover:bg-stone-700 sm:text-xl"
+			on:click={changeWindow}
+			href="/background">Background</a
+		>
+		<a
+			id="largeThoughtsOption"
+			class="p-4 hover:cursor-default hover:bg-stone-300 dark:text-white dark:hover:bg-stone-700 sm:text-xl"
+			href="/thoughts"
+			on:click={changeWindow}>Thoughts</a
+		>
+		<a
+			id="largeContactOption"
+			class="p-4 hover:cursor-default hover:bg-stone-300 dark:text-white dark:hover:bg-stone-700 sm:text-xl"
+			href="/contact"
+			on:click={changeWindow}>Contact</a
+		>
 	</div>
 {/if}
 

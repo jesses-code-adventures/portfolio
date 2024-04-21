@@ -6,4 +6,12 @@
 	.hyperlink {
 		@apply text-blue-800 dark:text-blue-400 hover:text-blue-900 dark:hover:text-blue-100;
 	}
+
+	.internalHyperlink {
+		@apply text-blue-800 dark:text-blue-400 hover:text-blue-900 dark:hover:text-blue-100 hover:cursor-default;
+	}
+
+	.prosepre {
+		@apply whitespace-pre-line text-left;
+	}
 }

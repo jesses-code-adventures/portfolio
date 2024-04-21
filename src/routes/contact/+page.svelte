@@ -34,19 +34,6 @@
 		name = '';
 		email = '';
 		message = '';
-		// fetch('/', {
-		// 	method: 'GET',
-		// 	headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-		// 	body: new URLSearchParams({ 'form-name': 'contact', name, email, message }).toString()
-		// }).then(() => {
-		// 	alert('Message sent!');
-		// 	name = '';
-		// 	email = '';
-		// 	message = '';
-		// }).catch((error) => {
-		// 	alert('Error sending message. Please try again later.');
-		// 	console.error(error);
-		// })
 	}
 </script>
 
@@ -57,24 +44,22 @@
 
 <div class="flex justify-evenly pt-12">
 	<form
-		class="flex flex-col w-72 dark:border-stone-200 h-96 justify-evenly"
+		class="flex h-96 w-72 flex-col justify-evenly dark:border-stone-200"
 		name="contact"
 		method="POST"
 		on:submit={handleSubmit}
 	>
 		<input type="hidden" name="form-name" value="contact" />
-		<label for="name">Name</label>
 		<input
 			id="name"
 			name="name"
 			required
 			placeholder="Name"
 			autocomplete="name"
-			class="dark:bg-stone-950 dark:border-stone-200 border-2 focus:shadow-glow p-2"
+			class="border-2 p-2 focus:shadow-glow focus:shadow-zinc-300 focus:outline-none dark:border-stone-200 dark:bg-stone-950 focus:dark:shadow-zinc-50"
 			type="text"
 			on:change={setName}
 		/>
-		<label for="email">Email</label>
 		<input
 			id="email"
 			name="email"
@@ -82,18 +67,17 @@
 			placeholder="Email"
 			autocomplete="email"
 			type="email"
-			class="dark:bg-stone-950 dark:border-stone-200 border-2 focus:shadow-glow p-2"
+			class="border-2 p-2 focus:shadow-glow focus:shadow-zinc-300 focus:outline-none dark:border-stone-200 dark:bg-stone-950 focus:dark:shadow-zinc-50"
 			on:change={setEmail}
 		/>
-		<label for="message">Message</label>
 		<textarea
 			id="message"
 			name="message"
 			required
-			placeholder="Type here..."
-			class="dark:bg-stone-950 dark:border-stone-200 border-2 focus:shadow-glow p-2"
+			placeholder="Type message..."
+			class="border-2 p-2 focus:shadow-glow focus:shadow-zinc-300 focus:outline-none dark:border-stone-200 dark:bg-stone-950 focus:dark:shadow-zinc-50"
 			on:change={setMessage}
 		/>
-		<button type="submit" class="hover:dark:bg-stone-600 p-4">Submit</button>
+		<button type="submit" class="bg-stone-50 p-4 hover:bg-stone-300 dark:bg-white dark:text-black dark:hover:text-white hover:dark:bg-stone-600 focus:outline-stone-300 focus:dark:outline-zinc-50 hover:cursor-default">Submit</button>
 	</form>
 </div>

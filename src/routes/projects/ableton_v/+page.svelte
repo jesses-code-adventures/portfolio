@@ -2,9 +2,9 @@
 	import ProjectView from '$lib/ProjectView.svelte';
 	const name = 'Ableton-V';
 	const content = `
-Ableton-V is a CLI tool that's built in Rust.
+Ableton-V is a CLI tool built for fun.
 
-It is a basic implementation of version control for Ableton sessions, and allows the user to trigger a save as action from the console while storing the session metadata in a Sqlite database.
+It is an exploration of Ableton's file formats and an excuse to use Rust for intensive string parsing purposes.
 
 I didn't go into this project expecting to build it all the way out, but I wanted to experiment with treating Ableton sessions as raw XML as I had seen this mentioned on a forum somewhere. It turns out parsing them as XML in Rust was very doable, and I was able to extract metadata such as track names/numbers, sample locations and much more.
 
@@ -37,7 +37,7 @@ impl<'a> From<&XmlEvent> for ParserOutput<'a> {
 </code>
 </pre>
 
-As a proof of concept I quite enjoyed exploring this, and unlike <a href="/projects/mysql_translate" class="hyperlink hover:cursor-default">MySQL Translate</a> I think Rust was the right choice here. I would like to build out the ability to diff sessions, and to be able to navigate through session history in the terminal as I can with git if I were to complete this.
+As a proof of concept I quite enjoyed exploring this, and unlike <a href="/projects/mysql_translate" class="hyperlink hover:cursor-default">MySQL Translate</a> I think Rust was the right choice here. In the future I'd like to build out the ability to diff sessions, and to be able to navigate through session history in the terminal as I can with git if I were to complete this.
 `;
 	const github_url = 'https://github.com/jesses-code-adventures/ableton-v';
 	/** @type {Array<import('$lib/Image.svelte')>} */
