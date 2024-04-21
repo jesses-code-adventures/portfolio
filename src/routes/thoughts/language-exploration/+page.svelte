@@ -123,9 +123,9 @@ if __name__ == "__main__":
 </pre>
 
 <pre class="prosepre">
-From there the direct programming we use at work remained fairly consistent, expanding through third party integrations and internal tools. In my own time I wanted to explore a more strongly typed lanaguage, because using Typescript and type-hinted Python was still only linting dynamically typed languages - I enjoyed that strictness and wanted more. While I didn't mind the Java I did in university, I wanted to explore something different and decided to try out Rust.
+At this point the stack at work was becoming fairly stable and I was getting some time for recreational coding. I wanted to try a strongly typed language because it felt like I was always trying to make dyanamically typed languages have types - why not just use types? Since I had already tried Java in university and wanted something new, I chose Rust.
 
-I made this choice assuming I'd learn about memory management due to the language not having a garbage collector, but in hindsight something more traditional like C would have been a better choice for this. Rust got me thinking about copying references vs values which made me more conscious of memory in my programming overall, but utimately Rust's borrow checker and helpful compiler give you a new set of problems to consider that don't fully overlap with core memory management concepts. In fact, they are designed so you can avoid them.
+I made this choice assuming I'd learn about memory management - the language isn't garbage collected, after all. In hindsight something more traditional like C would have been a better choice for this. Rust got me thinking about copying references vs values which made me more conscious of memory in my programming overall, but utimately Rust's borrow checker and helpful compiler give you a new set of problems to consider that don't fully overlap with core memory management concepts. In fact, they are designed so you can avoid them.
 
 The concepts I learned while using Rust have been valuable and have defied my initial expectations. It forces you to be more conscious of errors, which is an awareness that translated to less strict languages. This also helped me develop an attitude of keeping error-prone code like I/O operations and data parsing in their own areas, so that the core functionality can be more stable by using optimal data types at all times.
 
@@ -159,9 +159,9 @@ impl Log {
 </code>
 </pre>
 	<pre class="prosepre">
-This was a central concept in Rust, but it was more obscured in languages I was used to (especially before Python introduced match statements in 3.10). However, it's an invaluable pattern for solving many programming problems and using Rust gave me a new appreciation for good enum support in programming languages.
+This was a central concept in Rust, but it was more obscured in languages I was used to (especially before Python introduced match statements in 3.10). However, it's an invaluable pattern for solving many programming problems and using Rust gave me a new appreciation for languages with good enum support.
 
-To go back to our example of transferring records in Python, you would see a bit more code (perhaps a byproduct of using Rust at all), but we get a lot more out of it. The power of Rust's iterators made me want more out of my solutions in Python, and a little research made me discover Generators - a solution that was great in my situation. We weren't able to use multithreaded requests with the rate limits applied by our service providers, but creating an iterator of parsed Record responses allowed data to flow much more effectively than when we were waiting for the records, then putting them all in the database.
+To go back to our example of transferring records in Python, I'll be upfront - there's a bit more code (perhaps a byproduct of using Rust at all). It's worth it though. Rust's powerful iterators gave me the desire to make better use of my Python iterations, so I googled my way to generators. We weren't able to use multithreaded requests with the rate limits applied by our service providers, but creating a generator of parsed Record responses allowed data to flow much more effectively than when we were waiting for the records, then putting them all in the database. It also naturally handled large batches of records better, only dealing with one record at a time regardless of the size of the job.
 </pre>
 
 	<pre class="prosepre">
