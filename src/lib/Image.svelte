@@ -47,7 +47,7 @@
 {:else if loading}
 	<img
 		class={tailwindClass}
-		src="https://c.tenor.com/On7kvXhzml4AAAAi/loading-gif.gif"
+		src="/loading-gif.gif"
 		alt="Loading..."
 	/>
 {/if}
