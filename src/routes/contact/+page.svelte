@@ -1,40 +1,23 @@
 <script>
-	let name = '';
-	let email = '';
-	let message = '';
-
-	/**
-	 * @param {Event & { currentTarget: HTMLInputElement }} event
-	 */
-	function setName(event) {
-		name = event.currentTarget.value;
-	}
-
-	/**
-	 * @param {Event & { currentTarget: HTMLInputElement }} event
-	 */
-	function setEmail(event) {
-		email = event.currentTarget.value;
-	}
-
-	/**
-	 * @param {Event & { currentTarget: HTMLTextAreaElement }} event
-	 */
-	function setMessage(event) {
-		message = event.currentTarget.value;
-	}
-
-	/**
-	 * @param {Event} event
-	 */
-	function handleSubmit(event) {
-		event.preventDefault();
-		console.log(name, email, message);
-		alert('Message sent!');
-		name = '';
-		email = '';
-		message = '';
-	}
+  import emailjs from '@emailjs/browser';
+  // @ts-expect-error
+  const sendEmail = (e) => {
+    if (!e.target) return;
+    emailjs
+      .sendForm('service_x4ir6va', 'template_huobpyi', e.target, {
+        publicKey: 'GIo-VAHsmJAU2L0cr',
+      })
+      .then(
+        () => {
+	  alert('Message sent!');
+          console.log('SUCCESS!');
+        },
+        (error) => {
+	  alert('Message failed :(');
+          console.log('FAILED...', error.text);
+        },
+      );
+  };
 </script>
 
 <svelte:head>
@@ -47,18 +30,17 @@
 		class="flex h-96 w-72 flex-col justify-evenly dark:border-stone-200"
 		name="contact"
 		method="POST"
-		on:submit={handleSubmit}
+		on:submit|preventDefault={sendEmail}
 	>
 		<input type="hidden" name="form-name" value="contact" />
 		<input
-			id="name"
-			name="name"
+			id="from_name"
+			name="from_name"
 			required
 			placeholder="Name"
 			autocomplete="name"
 			class="border-2 p-2 focus:shadow-glow focus:shadow-zinc-300 focus:outline-none dark:border-stone-200 dark:bg-stone-950 focus:dark:shadow-zinc-50"
 			type="text"
-			on:change={setName}
 		/>
 		<input
 			id="email"
@@ -68,7 +50,6 @@
 			autocomplete="email"
 			type="email"
 			class="border-2 p-2 focus:shadow-glow focus:shadow-zinc-300 focus:outline-none dark:border-stone-200 dark:bg-stone-950 focus:dark:shadow-zinc-50"
-			on:change={setEmail}
 		/>
 		<textarea
 			id="message"
@@ -76,8 +57,11 @@
 			required
 			placeholder="Type message..."
 			class="border-2 p-2 focus:shadow-glow focus:shadow-zinc-300 focus:outline-none dark:border-stone-200 dark:bg-stone-950 focus:dark:shadow-zinc-50"
-			on:change={setMessage}
 		/>
-		<button type="submit" class="bg-stone-50 p-4 hover:bg-stone-300 dark:bg-white dark:text-black dark:hover:text-white hover:dark:bg-stone-600 focus:outline-stone-300 focus:dark:outline-zinc-50 hover:cursor-default">Submit</button>
+		<button
+			type="submit"
+			class="bg-stone-50 p-4 hover:bg-stone-300 dark:bg-white dark:text-black dark:hover:text-white hover:dark:bg-stone-600 focus:outline-stone-300 focus:dark:outline-zinc-50 hover:cursor-default"
+			>Submit</button
+		>
 	</form>
 </div>

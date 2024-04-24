@@ -18,7 +18,7 @@
 		<h1 class="text-3xl sm:pt-12 md:text-left"><span class="border-stone-600 sm:border-b-2">Jesse Williams - Software Developer</span></h1>
 		<Image
 			src="headshot.webp"
-			tailwindClass="h-48 w-34 w-auto py-4 sm:py-0 sm:rounded-full sm:border-4 border-stone-600 object-scale-down"
+			tailwindClass="h-48 aspect-auto w-auto py-4 sm:py-0 sm:rounded-full sm:border-4 border-stone-600 object-scale-down"
 			alt="Photo of jesse"
 		/>
 	</div>
