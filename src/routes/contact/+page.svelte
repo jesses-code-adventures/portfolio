@@ -10,11 +10,10 @@
       .then(
         () => {
 	  alert('Message sent!');
-          console.log('SUCCESS!');
+	  e.target.reset();
         },
         (error) => {
-	  alert('Message failed :(');
-          console.log('FAILED...', error.text);
+	  alert(`Message failed :(\n${error.text}`);
         },
       );
   };
