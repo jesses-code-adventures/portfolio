@@ -12,9 +12,9 @@
 		class="mx-auto flex w-full flex-col items-center justify-evenly justify-items-center gap-y-8 sm:flex-row"
 	>
 		<ProjectPreview
-			name="MySQL Translate"
-			description="Keep multiple mysql schema representations in sync with each other, and with the database. A CLI tool written in Rust."
-			url="/projects/mysql_translate/"
+			name="excavator"
+			description="A golang CLI application for managing music samples locally. Designed to make managing files between hardware samplers easier."
+			url="/projects/excavator/"
 		/>
 		<ProjectPreview
 			name="utapi-go"
@@ -22,9 +22,9 @@
 			url="/projects/utapi-go/"
 		/>
 		<ProjectPreview
-			name="excavator"
-			description="A golang CLI application for managing music samples locally. Designed to make managing files between hardware samplers easier."
-			url="/projects/excavator/"
+			name="MySQL Translate"
+			description="Keep multiple mysql schema representations in sync with each other, and with the database. A CLI tool written in Rust."
+			url="/projects/mysql_translate/"
 		/>
 	</div>
 </div>
