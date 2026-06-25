@@ -1,7 +1,7 @@
 <script>
-    import ProjectView from "$lib/ProjectView.svelte";
-    const name = "Excavator";
-    const content = `
+	import ProjectView from '$lib/ProjectView.svelte';
+	const name = 'Excavator';
+	const content = `
 Excavator is a CLI application designed to help music producers manage their samples more easily. This is quite niche of course as it requires someone who makes sample-based music and is comfortable using the command line, but I made it because I wanted it.
 
 Using Excavator, it's possible to create libraries out of your samples by tagging them as parts of certain collections, which can contain subcollections. You can then export your collections to a directory, which can be loaded onto a hardware machine. Additionally, the export can be done using symlinks instead of copying the files directly, allowing DAW users to create virtual collections of their samples and reducing the need to jump between sample packs.
@@ -13,15 +13,15 @@ I was able to implement audio playback using the Beep library, allowing samples 
 I'd also like to mention how great the Charm CLI tools are, including Bubbletea, Lipgloss and various others. These tools allowed me to establish the render loop and the styling of the application extremely quickly, they were really a pleasure to get set up with.
 
 I'm not sure how useful this application is to anyone else, but it's very satisfying to me personally.
-`
-    const github_url = "https://github.com/jesses-code-adventures/excavator"
-    /** @type {Array<import('$lib/Image.svelte')>} */
-    const images = [];
+`;
+	const github_url = 'https://github.com/jesses-code-adventures/excavator';
+	/** @type {Array<import('$lib/Image.svelte')>} */
+	const images = [];
 </script>
 
 <svelte:head>
-    <title>Excavator - Jesse Williams</title>
-    <meta name="description" content="A golang terminal application for managing music samples">
+	<title>Excavator - Jesse Williams</title>
+	<meta name="description" content="A golang terminal application for managing music samples" />
 </svelte:head>
 
-<ProjectView name={name} content={content} web_url={null} github_url={github_url} images={images} />
+<ProjectView {name} {content} web_url={null} {github_url} {images} />

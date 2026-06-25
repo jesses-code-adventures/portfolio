@@ -45,9 +45,5 @@
 		alt="Not Found"
 	/>
 {:else if loading}
-	<img
-		class={tailwindClass}
-		src="/loading-gif.gif"
-		alt="Loading..."
-	/>
+	<img class={tailwindClass} src="/loading-gif.gif" alt="Loading..." />
 {/if}

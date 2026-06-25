@@ -1,7 +1,7 @@
 <script>
-    import ProjectView from "$lib/ProjectView.svelte";
-    const name = "MySQL Translate";
-    const content = `MySQL Translate is a CLI tool that's built in Rust.
+	import ProjectView from '$lib/ProjectView.svelte';
+	const name = 'MySQL Translate';
+	const content = `MySQL Translate is a CLI tool that's built in Rust.
 
 It is designed to keep multiple representations of a MySQL schema in sync with each other, and with the database.
 
@@ -13,14 +13,14 @@ With that said, the benefits of this may be outweighed by the difficulty of main
 
 If I revisit this, I would probably take a simpler approach using bash scripts or a less complex approach in Rust. After having built other projects, I feel like I could have built the generic implementation of this more simply and handled Prisma's edge cases in a more isolated or plugin-oriented way.
 `;
-    const github_url = "https://github.com/jesses-code-adventures/mysql_translate"
-    /** @type {Array<import('$lib/Image.svelte')>} */
-    const images = [];
+	const github_url = 'https://github.com/jesses-code-adventures/mysql_translate';
+	/** @type {Array<import('$lib/Image.svelte')>} */
+	const images = [];
 </script>
 
 <svelte:head>
-    <title>MySQL Translate - Jesse Williams</title>
-    <meta name="description" content="An sql schema representation sync system by Jesse Williams.">
+	<title>MySQL Translate - Jesse Williams</title>
+	<meta name="description" content="An sql schema representation sync system by Jesse Williams." />
 </svelte:head>
 
-<ProjectView name={name} content={content} web_url={null} github_url={github_url} images={images} />
+<ProjectView {name} {content} web_url={null} {github_url} {images} />

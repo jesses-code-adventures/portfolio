@@ -1,22 +1,22 @@
 <script>
-  import emailjs from '@emailjs/browser';
-  // @ts-expect-error
-  const sendEmail = (e) => {
-    if (!e.target) return;
-    emailjs
-      .sendForm('service_x4ir6va', 'template_huobpyi', e.target, {
-        publicKey: 'GIo-VAHsmJAU2L0cr',
-      })
-      .then(
-        () => {
-	  alert('Message sent!');
-	  e.target.reset();
-        },
-        (error) => {
-	  alert(`Message failed :(\n${error.text}`);
-        },
-      );
-  };
+	import emailjs from '@emailjs/browser';
+	// @ts-expect-error
+	const sendEmail = (e) => {
+		if (!e.target) return;
+		emailjs
+			.sendForm('service_x4ir6va', 'template_huobpyi', e.target, {
+				publicKey: 'GIo-VAHsmJAU2L0cr'
+			})
+			.then(
+				() => {
+					alert('Message sent!');
+					e.target.reset();
+				},
+				(error) => {
+					alert(`Message failed :(\n${error.text}`);
+				}
+			);
+	};
 </script>
 
 <svelte:head>

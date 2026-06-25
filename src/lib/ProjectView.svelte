@@ -33,13 +33,13 @@
 		{/if}
 	</div>
 	{#if images.length > 0}
-	<div
-		class="mx-auto grid w-full grid-cols-1 items-center justify-items-center gap-y-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
-	>
-		{#each images as image}
-			{image}
-		{/each}
-	</div>
+		<div
+			class="mx-auto grid w-full grid-cols-1 items-center justify-items-center gap-y-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+		>
+			{#each images as image}
+				{image}
+			{/each}
+		</div>
 	{/if}
 	<div class="flex justify-evenly">
 		<!-- eslint-disable-next-line -->

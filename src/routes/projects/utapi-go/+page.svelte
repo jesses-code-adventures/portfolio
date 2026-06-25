@@ -1,13 +1,3 @@
-<svelte:head>
-	<title>utapi-go - Jesse Williams</title>
-	<meta
-		name="description"
-		content="A golang api wrapper for interacting with the uploadthing API."
-	/>
-	<link href="/prism.css" rel="stylesheet" />
-	<script src="/prism.js" defer></script>
-</svelte:head>
-
 <script>
 	import ProjectView from '$lib/ProjectView.svelte';
 	const name = 'utapi-go';
@@ -59,5 +49,15 @@ func main() {
 	/** @type {Array<import('$lib/Image.svelte')>} */
 	const images = [];
 </script>
+
+<svelte:head>
+	<title>utapi-go - Jesse Williams</title>
+	<meta
+		name="description"
+		content="A golang api wrapper for interacting with the uploadthing API."
+	/>
+	<link href="/prism.css" rel="stylesheet" />
+	<script src="/prism.js" defer></script>
+</svelte:head>
 
 <ProjectView {name} {content} web_url={null} {github_url} {images} />

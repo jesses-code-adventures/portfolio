@@ -17,7 +17,6 @@
 
 	//Reset scroll top
 
-
 	// window.on('beforeunload', function(){
 	// 	  $(window).scrollTop(0);
 	// });
@@ -25,11 +24,11 @@
 	let smallDevice = false;
 	let tinyDevice = false;
 	onMount(() => {
-		history.scrollRestoration = "manual";
-        window.scrollTo(0, 0);
-        window.onpopstate = () => {
-            window.scrollTo(0, 0);
-        };
+		history.scrollRestoration = 'manual';
+		window.scrollTo(0, 0);
+		window.onpopstate = () => {
+			window.scrollTo(0, 0);
+		};
 		smallDevice = window.innerWidth <= 640;
 		tinyDevice = window.innerWidth <= tinyDeviceWidth;
 		window.addEventListener('resize', () => {
