@@ -123,33 +123,35 @@
 	/>
 </svelte:head>
 
-<main class="mx-auto max-w-5xl pb-24 text-left">
-	<section class="mb-12 border-b border-stone-300 pb-12 dark:border-stone-700">
+<main class="mx-auto max-w-7xl pb-20 text-left">
+	<section class="mb-9 border-b border-stone-300 pb-10 dark:border-stone-700">
 		<p class="section-label">Selected projects</p>
-		<h1 class="mt-4 text-5xl leading-[0.95] sm:text-7xl">The last couple of years got busy.</h1>
-		<p class="mt-6 max-w-3xl text-lg leading-8 text-stone-700 dark:text-stone-200">
+		<h1 class="mt-4 text-4xl leading-[0.98] sm:text-6xl xl:text-7xl">
+			The last couple of years got busy.
+		</h1>
+		<p class="mt-5 max-w-4xl text-base leading-8 text-stone-700 dark:text-stone-200 lg:text-lg">
 			This portfolio used to mostly show early Rust and Go experiments. The newer GitHub history is
 			heavier on production-shaped Go, Neovim/Lua tooling, AI workflow infrastructure, open source
 			contributions and internal product scaffolding.
 		</p>
 	</section>
 
-	<div class="grid gap-12">
+	<div class="grid gap-9">
 		{#each sections as section}
 			<section
-				class="grid gap-6 border-b border-stone-300 pb-10 last:border-b-0 dark:border-stone-700 md:grid-cols-[14rem_1fr]"
+				class="grid gap-5 border-b border-stone-300 pb-8 last:border-b-0 dark:border-stone-700 md:grid-cols-[12rem_1fr] xl:grid-cols-[14rem_1fr]"
 			>
 				<h2 class="section-label">{section.title}</h2>
-				<div class="divide-y divide-stone-300 dark:divide-stone-700">
+				<div class="grid gap-x-8 md:grid-cols-2 xl:grid-cols-3">
 					{#each section.items as item}
 						<a
-							class="grid gap-2 py-5 transition-colors hover:text-amber-700 dark:hover:text-amber-300 md:grid-cols-[14rem_1fr]"
+							class="border-t border-stone-300 py-4 transition-colors hover:text-amber-700 dark:border-stone-700 dark:hover:text-amber-300"
 							href={item.url}
 							target={item.url.startsWith('http') ? '_blank' : undefined}
 							rel="noreferrer"
 						>
-							<h3 class="text-2xl">{item.name}</h3>
-							<p class="leading-7 text-stone-700 dark:text-stone-200">{item.detail}</p>
+							<h3 class="text-xl xl:text-2xl">{item.name}</h3>
+							<p class="mt-2 leading-7 text-stone-700 dark:text-stone-200">{item.detail}</p>
 						</a>
 					{/each}
 				</div>

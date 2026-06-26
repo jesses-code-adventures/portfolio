@@ -5,7 +5,7 @@
 </script>
 
 <Navbar />
-<div id="content" class="flex flex-col justify-between text-center pt-20 px-4">
+<div id="content" class="flex flex-col justify-between px-5 pt-16 text-center sm:px-8 lg:px-12">
 	<slot />
 </div>
 <Footer />

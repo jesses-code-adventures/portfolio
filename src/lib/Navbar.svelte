@@ -1,7 +1,13 @@
 <script>
-	import { onMount } from 'svelte';
 	let isOpen = false;
-	const tinyDeviceWidth = 340;
+
+	const links = [
+		['Home', '/'],
+		['Projects', '/projects'],
+		['Background', '/background'],
+		['Thoughts', '/thoughts'],
+		['Contact', '/contact']
+	];
 
 	function toggleMenu() {
 		isOpen = !isOpen;
@@ -10,156 +16,135 @@
 	function closeMenu() {
 		isOpen = false;
 	}
-
-	function changeWindow() {
-		closeMenu();
-	}
-
-	//Reset scroll top
-
-	// window.on('beforeunload', function(){
-	// 	  $(window).scrollTop(0);
-	// });
-
-	let smallDevice = false;
-	let tinyDevice = false;
-	onMount(() => {
-		history.scrollRestoration = 'manual';
-		window.scrollTo(0, 0);
-		window.onpopstate = () => {
-			window.scrollTo(0, 0);
-		};
-		smallDevice = window.innerWidth <= 640;
-		tinyDevice = window.innerWidth <= tinyDeviceWidth;
-		window.addEventListener('resize', () => {
-			isOpen = false;
-			if (window.innerWidth <= 640 && window.innerWidth > tinyDeviceWidth) {
-				smallDevice = true;
-				tinyDevice = false;
-			} else if (window.innerWidth <= tinyDeviceWidth) {
-				tinyDevice = true;
-				smallDevice = false;
-			} else {
-				smallDevice = false;
-				tinyDevice = false;
-			}
-		});
-	});
 </script>
 
-{#if tinyDevice}
-	<div hidden>navbar</div>
-{:else if smallDevice}
-	<div
-		id="smallDevceMenuAndButton"
-		class="fixed left-0 top-0 z-50 w-full bg-stone-100 text-black dark:bg-black dark:text-white"
-	>
-		<div id="smallDeviceButtonContainer" class="flex items-center justify-end p-4">
-			<button id="hamburger" aria-label="hamburger" class="hamburger" on:click={toggleMenu}>
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					width="30"
-					height="30"
-					fill="currentColor"
-					class="bi bi-list"
-					viewBox="0 0 16 16"
-				>
-					<path
-						fill-rule="evenodd"
-						d="M2.5 12.5A.5.5 0 0 1 2 12h12a.5.5 0 0 1 0 1H2a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 2 8h12a.5.5 0 0 1 0 1H2a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 2 4h12a.5.5 0 0 1 0 1H2a.5.5 0 0 1-.5-.5z"
-					/>
-				</svg>
-			</button>
+<nav
+	class="fixed left-0 top-0 z-50 w-full border-b border-stone-200 bg-stone-50 text-stone-900 dark:border-stone-800 dark:bg-stone-950 dark:text-stone-100"
+>
+	<div class="mx-auto flex max-w-7xl items-center justify-between px-5 py-3 sm:px-8 lg:px-12">
+		<a class="nav-mark" href="/" on:click={closeMenu}>Jesse Williams</a>
+
+		<div class="nav-desktop-links items-center gap-7">
+			{#each links.slice(1) as [label, href]}
+				<a class="nav-link" {href} on:click={closeMenu}>{label}</a>
+			{/each}
 		</div>
-		<div
-			id="smallDeviceOptions"
-			class:menu-enter={!isOpen}
-			class:menu-enter-active={isOpen}
-			class="h-screen flex flex-col text-center"
+
+		<button
+			class="nav-menu-button"
+			aria-label="Toggle navigation"
+			aria-expanded={isOpen}
+			on:click={toggleMenu}
 		>
-			<a
-				id="smallHomeOption"
-				class="p-4 hover:cursor-default hover:bg-stone-300 dark:text-white dark:hover:bg-stone-700 sm:text-xl"
-				on:click={changeWindow}
-				href="/">Home</a
+			<span></span>
+			<span></span>
+		</button>
+	</div>
+
+	<div
+		class="nav-dropdown absolute left-0 top-[100%] w-full transition-opacity"
+		class:pointer-events-none={!isOpen}
+		class:opacity-0={!isOpen}
+		class:opacity-100={isOpen}
+	>
+		<div class="mx-auto flex max-w-7xl justify-end px-5">
+			<div
+				class="mt-2 grid min-w-48 gap-5 border border-stone-200 bg-stone-50 px-5 py-5 text-right shadow-lg shadow-stone-200/40 dark:border-stone-800 dark:bg-stone-950 dark:shadow-black/30"
 			>
-			<a
-				id="smallBackgroundOption"
-				class="p-4 hover:cursor-default hover:bg-stone-300 dark:text-white dark:hover:bg-stone-700 sm:text-xl"
-				on:click={changeWindow}
-				href="/background">Background</a
-			>
-			<a
-				id="smallThoughtsOption"
-				class="p-4 hover:cursor-default hover:bg-stone-300 dark:text-white dark:hover:bg-stone-700 sm:text-xl"
-				href="/thoughts"
-				on:click={changeWindow}>Thoughts</a
-			>
-			<a
-				id="smallContactOption"
-				class="p-4 hover:cursor-default hover:bg-stone-300 dark:text-white dark:hover:bg-stone-700 sm:text-xl"
-				href="/contact"
-				on:click={changeWindow}>Contact</a
-			>
+				{#each links as [label, href]}
+					<a class="nav-link text-lg" {href} on:click={closeMenu}>{label}</a>
+				{/each}
+			</div>
 		</div>
 	</div>
-{:else}
-	<div
-		id="largeDeviceOptions"
-		class="fixed top-0 z-50 flex w-full justify-evenly bg-stone-100 text-black dark:bg-black dark:text-white sm:px-16"
-	>
-		<a
-			id="largeHomeOption"
-			class="p-4 hover:cursor-default dark:text-white hover:bg-stone-300 dark:hover:bg-stone-700 sm:text-xl"
-			href="/"
-			on:click={changeWindow}>Home</a
-		>
-		<a
-			id="largeBackgroundOption"
-			class="p-4 hover:cursor-default hover:bg-stone-300 dark:text-white dark:hover:bg-stone-700 sm:text-xl"
-			on:click={changeWindow}
-			href="/background">Background</a
-		>
-		<a
-			id="largeThoughtsOption"
-			class="p-4 hover:cursor-default hover:bg-stone-300 dark:text-white dark:hover:bg-stone-700 sm:text-xl"
-			href="/thoughts"
-			on:click={changeWindow}>Thoughts</a
-		>
-		<a
-			id="largeContactOption"
-			class="p-4 hover:cursor-default hover:bg-stone-300 dark:text-white dark:hover:bg-stone-700 sm:text-xl"
-			href="/contact"
-			on:click={changeWindow}>Contact</a
-		>
-	</div>
-{/if}
+</nav>
 
 <style>
-	.menu-enter {
-		position: fixed;
-		top: 0;
+	.nav-mark,
+	.nav-link {
+		font-family:
+			Inter,
+			ui-sans-serif,
+			system-ui,
+			-apple-system,
+			BlinkMacSystemFont,
+			'Segoe UI',
+			sans-serif;
+	}
+
+	.nav-desktop-links {
+		display: none;
+	}
+
+	.nav-dropdown {
+		display: block;
+	}
+
+	.nav-mark {
+		font-size: 0.8rem;
+		font-weight: 650;
+		letter-spacing: 0.18em;
+		text-transform: uppercase;
+	}
+
+	.nav-link {
+		position: relative;
+		font-size: 0.78rem;
+		letter-spacing: 0.16em;
+		text-transform: uppercase;
+		color: inherit;
+		opacity: 0.72;
+		transition:
+			opacity 160ms ease,
+			color 160ms ease;
+	}
+
+	.nav-link:hover,
+	.nav-mark:hover {
+		opacity: 1;
+		color: rgb(180 83 9);
+	}
+
+	.nav-link::after {
+		content: '';
+		position: absolute;
 		left: 0;
 		right: 0;
-		bottom: 0;
-		display: flex;
-		flex-direction: column;
-		background-color: var(--tw-bg-opacity);
-		transform: translateX(-100%);
-		transition: transform 0.3s ease;
+		bottom: -0.35rem;
+		height: 1px;
+		background: currentColor;
+		transform: scaleX(0);
+		transform-origin: left;
+		transition: transform 160ms ease;
 	}
 
-	.menu-enter-active {
-		transform: translateX(0);
+	.nav-link:hover::after {
+		transform: scaleX(1);
 	}
 
-	.hamburger {
-		display: block;
+	.nav-menu-button {
+		display: grid;
+		gap: 0.35rem;
+		width: 2rem;
+		padding: 0.35rem 0;
 		cursor: pointer;
+		place-items: center;
+	}
+
+	.nav-menu-button span {
+		display: block;
+		height: 1px;
+		width: 100%;
+		background: currentColor;
 	}
 
 	@media (min-width: 640px) {
-		.hamburger {
+		.nav-desktop-links {
+			display: flex;
+		}
+
+		.nav-menu-button,
+		.nav-dropdown {
 			display: none;
 		}
 	}
