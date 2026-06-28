@@ -1,5 +1,4 @@
-# https://www.robotstxt.org/robotstxt.html
 User-agent: *
+Allow: /
 
-Disallow: /*.js$
-Disallow: /*.json
+Sitemap: https://jessewilliams.dev/sitemap.xml

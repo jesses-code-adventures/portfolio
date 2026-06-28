@@ -31,10 +31,10 @@ Once installed, run <span class="italic">:Pipeline open</span> to open the pipel
 </script>
 
 <svelte:head>
-	<title>pipeline.nvim - Jesse Williams</title>
+	<title>pipeline.nvim - Neovim GitHub Actions Plugin - Jesse Williams</title>
 	<meta
 		name="description"
-		content="A Neovim plugin for viewing GitHub Actions pipeline status in a floating editor window."
+		content="pipeline.nvim is a Neovim plugin for monitoring GitHub Actions and deployment status from inside the editor."
 	/>
 	<link href="/prism.css" rel="stylesheet" />
 	<script src="/prism.js" defer></script>

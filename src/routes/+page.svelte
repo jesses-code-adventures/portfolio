@@ -46,12 +46,12 @@
 		[
 			'utapi-go',
 			'Go SDK wrapper for the UploadThing API',
-			'https://github.com/jesses-code-adventures/utapi-go'
+			'/projects/utapi-go/'
 		],
 		[
 			'excavator',
 			'Go TUI for organising audio samples',
-			'https://github.com/jesses-code-adventures/excavator'
+			'/projects/excavator/'
 		],
 		[
 			'nvim-minimal',
@@ -67,7 +67,6 @@
 		name="description"
 		content="Portfolio for Sydney software engineer Jesse Williams: full-stack product work, AI agents, automation, infrastructure and open source tooling."
 	/>
-	<link rel="canonical" />
 </svelte:head>
 
 <main class="mx-auto max-w-7xl pb-20 text-left">
