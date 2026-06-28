@@ -56,7 +56,7 @@
 			required
 			placeholder="Type message..."
 			class="border-2 p-2 focus:shadow-glow focus:shadow-zinc-300 focus:outline-none dark:border-stone-200 dark:bg-stone-950 focus:dark:shadow-zinc-50"
-		/>
+		></textarea>
 		<button
 			type="submit"
 			class="bg-stone-50 p-4 hover:bg-stone-300 dark:bg-white dark:text-black dark:hover:text-white hover:dark:bg-stone-600 focus:outline-stone-300 focus:dark:outline-zinc-50 hover:cursor-default"
