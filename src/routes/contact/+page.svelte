@@ -56,9 +56,9 @@
 				<p class="section-label">Direct</p>
 				<a
 					class="mt-3 block text-2xl transition-colors hover:text-amber-700 dark:hover:text-amber-300"
-					href="mailto:jesse@jessewilliams.dev"
+					href="mailto:jesse.g.williams7@gmail.com"
 				>
-					jesse@jessewilliams.dev
+					jesse.g.williams7@gmail.com
 				</a>
 			</div>
 			<div class="border-t border-stone-300 pt-4 dark:border-stone-700">

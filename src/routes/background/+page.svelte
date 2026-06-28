@@ -43,12 +43,13 @@
 		<div>
 			<p class="section-label">Background</p>
 			<h1 class="mt-4 max-w-5xl text-4xl leading-[0.98] sm:text-6xl xl:text-7xl">
-				I got into software by making operations less painful.
+				I just wanted to be lazy...
 			</h1>
 		</div>
-		<p class="self-end text-base leading-8 text-stone-700 dark:text-stone-200 lg:text-lg">
-			That still shapes how I build: useful first, polished second, maintainable before it becomes
-			someone else's problem.
+		<p class="self-end text-base leading-8 text-stone-700 dark:text-stone-200 lg:text-lg whitespace-pre-line">
+			I taught myself to code in an effort to "automate the boring work" of my Operations management job.
+
+			I told myself I'd save so much time... how naive I was.
 		</p>
 	</section>
 
@@ -64,16 +65,5 @@
 				</article>
 			{/each}
 		</div>
-	</section>
-
-	<section
-		class="grid gap-6 border-t border-stone-300 pt-10 dark:border-stone-700 md:grid-cols-[12rem_1fr] xl:grid-cols-[14rem_1fr]"
-	>
-		<h2 class="section-label">Operating principles</h2>
-		<ul class="grid gap-x-8 text-lg leading-8 dark:divide-stone-700 md:grid-cols-2 xl:grid-cols-3">
-			{#each principles as principle}
-				<li class="border-t border-stone-300 py-3 dark:border-stone-700">{principle}</li>
-			{/each}
-		</ul>
 	</section>
 </main>
