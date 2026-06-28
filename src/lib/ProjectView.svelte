@@ -15,21 +15,13 @@
 	<h1 class="text-left text-3xl lg:pl-24">{name}</h1>
 	<div class="text-left lg:pl-24">
 		{#if web_url}
-			<a
-				href={web_url}
-				target="_blank"
-				class="text-left text-xl italic text-stone-800 dark:text-stone-200">Website</a
-			>
+			<a href={web_url} target="_blank" class="hyperlink text-left text-xl italic">Website</a>
 		{/if}
 		{#if web_url && github_url}
 			<span> | </span>
 		{/if}
 		{#if github_url}
-			<a
-				href={github_url}
-				target="_blank"
-				class="text-left text-xl italic text-stone-800 dark:text-stone-200">Github</a
-			>
+			<a href={github_url} target="_blank" class="hyperlink text-left text-xl italic">Github</a>
 		{/if}
 	</div>
 	{#if images.length > 0}

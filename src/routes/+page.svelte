@@ -24,6 +24,11 @@
 
 	const projects = [
 		[
+			'pipeline.nvim',
+			'Neovim floating window for tracking GitHub Actions pipeline status',
+			'/projects/pipeline.nvim/'
+		],
+		[
 			'treeai',
 			'Go workflow tool for agentic coding with git worktrees and tmux',
 			'https://github.com/jesses-code-adventures/treeai'
@@ -123,7 +128,7 @@
 				<a
 					class="border-t border-stone-300 py-4 transition-colors hover:text-amber-700 dark:border-stone-700 dark:hover:text-amber-300"
 					href={url}
-					target="_blank"
+					target={url.startsWith('http') ? '_blank' : undefined}
 					rel="noreferrer"
 				>
 					<h3 class="text-xl xl:text-2xl">{name}</h3>

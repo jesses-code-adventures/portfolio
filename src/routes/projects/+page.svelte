@@ -27,6 +27,12 @@
 			title: 'Neovim and editor tooling',
 			items: [
 				{
+					name: 'pipeline.nvim',
+					url: '/projects/pipeline.nvim/',
+					detail:
+						'Floating Neovim UI for checking GitHub Actions pipeline status without leaving the editor.'
+				},
+				{
 					name: 'nvim-minimal',
 					url: 'https://github.com/jesses-code-adventures/nvim-minimal',
 					detail:
