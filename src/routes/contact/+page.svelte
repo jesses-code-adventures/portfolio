@@ -9,6 +9,17 @@
 		const form = e.currentTarget;
 		if (!(form instanceof HTMLFormElement)) return;
 
+		const formData = new FormData(form);
+		const email = formData.get('email');
+		const phone = formData.get('phone');
+		const message = formData.get('message');
+		const messageInput = form.elements.namedItem('message');
+		const originalMessage = typeof message === 'string' ? message : '';
+
+		if (messageInput instanceof HTMLTextAreaElement) {
+			messageInput.value = `Email: ${typeof email === 'string' ? email : ''}\nPhone: ${typeof phone === 'string' && phone ? phone : 'Not provided'}\n\n${originalMessage}`;
+		}
+
 		status = 'sending';
 		statusMessage = 'Sending...';
 
@@ -24,6 +35,9 @@
 			status = 'error';
 			const detail = error && typeof error === 'object' && 'text' in error ? `: ${error.text}` : '';
 			statusMessage = `Message failed${detail}. Please try again.`;
+			if (messageInput instanceof HTMLTextAreaElement) {
+				messageInput.value = originalMessage;
+			}
 		}
 	};
 </script>
@@ -130,6 +144,20 @@
 						type="email"
 						class="border border-stone-300 bg-transparent p-4 text-base normal-case tracking-normal text-stone-950 outline-none transition-colors placeholder:text-stone-400 focus:border-amber-700 dark:border-stone-700 dark:text-stone-50 dark:placeholder:text-stone-500 dark:focus:border-amber-300"
 						placeholder="you@example.com"
+					/>
+				</label>
+				<label
+					class="grid gap-2 text-sm uppercase tracking-[0.18em] text-stone-500 dark:text-stone-400"
+					for="phone"
+				>
+					Phone
+					<input
+						id="phone"
+						name="phone"
+						autocomplete="tel"
+						type="tel"
+						class="border border-stone-300 bg-transparent p-4 text-base normal-case tracking-normal text-stone-950 outline-none transition-colors placeholder:text-stone-400 focus:border-amber-700 dark:border-stone-700 dark:text-stone-50 dark:placeholder:text-stone-500 dark:focus:border-amber-300"
+						placeholder="Optional"
 					/>
 				</label>
 			</div>
