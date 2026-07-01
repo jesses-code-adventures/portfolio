@@ -44,6 +44,11 @@
 			'https://github.com/jesses-code-adventures/bruno.nvim'
 		],
 		[
+			'rivergraph',
+			'Go library for tracking parent and child event fan-out flows',
+			'/projects/rivergraph/'
+		],
+		[
 			'utapi-go',
 			'Go SDK wrapper for the UploadThing API',
 			'/projects/utapi-go/'
@@ -163,10 +168,6 @@
 					target="_blank"
 					rel="noreferrer">diffview_hide_dir.nvim</a
 				> fork.
-			</p>
-			<p>
-				The rest of the GitHub trail is mostly Go services and CLIs, Lua plugins, AI workflow
-				experiments, Obsidian tooling and production-shaped templates.
 			</p>
 		</div>
 	</section>

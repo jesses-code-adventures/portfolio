@@ -11,6 +11,7 @@ export const SITE_ROUTES = [
 	'/projects/kid_soma_website/',
 	'/projects/mysql_translate/',
 	'/projects/pipeline.nvim/',
+	'/projects/rivergraph/',
 	'/projects/utapi-go/',
 	'/thoughts/',
 	'/thoughts/language-exploration/',
