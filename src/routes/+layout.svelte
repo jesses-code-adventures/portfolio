@@ -9,7 +9,7 @@
 	const defaultDescription =
 		'Portfolio for Sydney software engineer Jesse Williams: full-stack product work, AI agents, automation, infrastructure and open source tooling.';
 
-	$: canonicalUrl = absoluteUrl($page.url.pathname.endsWith('/') ? $page.url.pathname : `${$page.url.pathname}/`);
+	$: canonicalUrl = absoluteUrl($page.url.pathname);
 	$: personSchema = JSON.stringify({
 		'@context': 'https://schema.org',
 		'@type': 'Person',
